@@ -37,12 +37,6 @@ def idGen():
           password = password + x
   return password
 
-#ENDPOINT = "https://azcosmosdevel.documents.azure.com"
-#KEY = "5j5aTA9sFT3KFLsq6eaKzAt63om1OPXRk50MR4tncI7uYHjqCMY0tmOriUAIbpYfPLUvsatKREIiACDbZZxMAA=="
-
-#DATABASE_NAME = "cosmicworks"
-#CONTAINER_NAME = "products"
-
 def idGen():
   MAX_LEN = 12
   DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
