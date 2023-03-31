@@ -16,7 +16,7 @@ This library can be installed with the following command:
 
 
 ```
-pip install azure.cosmom
+pip install azure.cosmos
 ```
 
 # Source code
@@ -41,26 +41,6 @@ KEY = "YourPrimaryKey"
 DATABASE_NAME = "cosmicworks"
 CONTAINER_NAME = "products"
 
-def idGen():
-  MAX_LEN = 12
-  DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-  LOCASE_CHARACTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-                       'i', 'j', 'k', 'm', 'n', 'o', 'p', 'q',
-                       'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
-                       'z']
-
-  COMBINED_LIST = DIGITS + LOCASE_CHARACTERS
-  rand_digit = random.choice(DIGITS)
-  rand_lower = random.choice(LOCASE_CHARACTERS)
-  temp_pass = rand_digit + rand_lower
-  for x in range(MAX_LEN - 4):
-      temp_pass = temp_pass + random.choice(COMBINED_LIST)
-      temp_pass_list = array.array('u', temp_pass)
-      random.shuffle(temp_pass_list)
-  password = ""
-  for x in temp_pass_list:
-          password = password + x
-  return password
 
 def idGen():
   MAX_LEN = 12
