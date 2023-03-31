@@ -37,27 +37,6 @@ def idGen():
           password = password + x
   return password
 
-def idGen():
-  MAX_LEN = 12
-  DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-  LOCASE_CHARACTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-                       'i', 'j', 'k', 'm', 'n', 'o', 'p', 'q',
-                       'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
-                       'z']
-
-  COMBINED_LIST = DIGITS + LOCASE_CHARACTERS
-  rand_digit = random.choice(DIGITS)
-  rand_lower = random.choice(LOCASE_CHARACTERS)
-  temp_pass = rand_digit + rand_lower
-  for x in range(MAX_LEN - 4):
-      temp_pass = temp_pass + random.choice(COMBINED_LIST)
-      temp_pass_list = array.array('u', temp_pass)
-      random.shuffle(temp_pass_list)
-  password = ""
-  for x in temp_pass_list:
-          password = password + x
-  return password
-
 def readWrite(container):
   container.create_item(new_item)
   existing_item = container.read_item(item=item_id, partition_key="61dba35b-4f02-45c5-b648-c6badc0cbd79",)
